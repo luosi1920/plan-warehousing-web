@@ -4,7 +4,7 @@ import com.yibai.crown.provider.dto.response.PageResponseDTO;
 import com.yibai.plan.warehousing.dto.request.CriteriaDTO;
 import com.yibai.plan.warehousing.dto.request.UpdateReqDTO;
 import com.yibai.plan.warehousing.dto.response.YibaiOverseaPrListDto;
-import com.yibai.plan.warehousing.web.remote.YiBaiOverSeaService;
+import com.yibai.plan.warehousing.service.YiBaiOverSeaRemoteService;
 import org.springframework.stereotype.Component;
 
 /**
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
  * @create: 2019-03-10 11:55
  **/
 @Component
-public class YibaiHystrixFallback implements YiBaiOverSeaService {
+public class YibaiHystrixFallback implements YiBaiOverSeaRemoteService {
 
     @Override
     public PageResponseDTO<YibaiOverseaPrListDto> queryByCriteria(CriteriaDTO criteriaDto) {
